@@ -1,4 +1,6 @@
-﻿void StringLength()
+﻿//ყველა მეთოდი გაშვებულია და დაკომენტარებულია რათა სათითაოდ უფრო მარტივად შემოწმდეს
+
+void StringLength()
 {
     string shortText = "G@M RJob@";
     string longText = "erti ori sami ";
@@ -48,4 +50,99 @@ void StringTrim()
     Console.WriteLine($"[{trimmedText}]");
 }
 
-StringTrim();
+//StringTrim();
+
+//ამ კოდის გაშვებისას ერორს მიგდებდა და როგორც გავარკვიე ანტივირუსი არ უშვებდა,მაგრამ წესით სწორი უნდა იყოს(ან ინდექსის გაწერის გამო )
+//void StringSubstring()
+//{
+//    string text = "Nirvana metallica crowbar radiohead";
+
+    
+//    Console.WriteLine(text.Substring(0, 7));
+//    Console.WriteLine(text.Substring(8, 9));
+//    Console.WriteLine(text.Substring(0, text.Length - 9));
+//    Console.WriteLine(text);
+//}
+
+//StringSubstring();
+
+
+//ვარიანტი 2
+
+void StringSubstring()
+{
+    string text = "Nirvana metallica crowbar radiohead";
+
+
+    Console.WriteLine(text.Substring(0, 7));
+    Console.WriteLine(text.Substring(8, 9));
+    Console.WriteLine(text.Substring(0, 26));
+    Console.WriteLine(text);
+}
+
+//StringSubstring();
+
+void StringEquals()
+{
+    string password = "Itstep";
+
+    Console.WriteLine("Gtxovt sheiyvanot paroli:");
+    string loginPassword = Console.ReadLine();
+
+    bool isCorrect = password.Equals(loginPassword);
+
+    if (isCorrect)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("warmatebit shexvedit!");
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine("arasworad sheiyvanet!");
+    }
+}
+
+//StringEquals();
+
+void StringSplit()
+{
+    string animals = "Lion,Tiger,Wolf,Dog,Sheep,Cat,Pig,Cow";
+
+    string[] animalArray = animals.Split(',');
+
+    foreach (string animal in animalArray)
+    {
+        Console.WriteLine(animal);
+    }
+}
+
+//StringSplit();
+
+void StringContains()
+{
+    string product = "Lenovo ThinkPad T16 G4 21QE0063GX, Intel Core Ultra 5-225U, Intel UHD Graphics, 16GB RAM SSD 512GB, Free Dos, ლეპტოპი";
+
+    string productLower = product.ToLower();
+    string productUpper = product.ToUpper();
+
+    Console.WriteLine(productLower);
+    Console.WriteLine(productUpper);
+
+    Console.WriteLine("Modzebnet sasurveli nivti:");
+    string search = Console.ReadLine();
+    string searchLower = search.ToLower();
+
+    bool searched = productLower.Contains(searchLower);
+
+    if (searched)
+    {
+        Console.WriteLine(product);
+    }
+    else
+    {
+        Console.WriteLine("ver moidzebna");
+    }
+}
+
+//StringContains();
