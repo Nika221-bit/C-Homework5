@@ -137,6 +137,20 @@ void StringSplit()
 
 //StringSplit();
 
+void StringReplace()
+{
+    string animals = "Lion,Tiger,Wolf,Dog,Sheep,Cat,Pig,Cow";
+
+    string animalsWithSpace = animals.Replace(",", " ");
+    string animals2 = animals.Replace("Cow", "Chicken");
+
+    Console.WriteLine(animals);
+    Console.WriteLine(animalsWithSpace);
+    Console.WriteLine(animals2);
+}
+
+//StringReplace();
+
 void StringContains()
 {
     string product = "Lenovo ThinkPad T16 G4 21QE0063GX, Intel Core Ultra 5-225U, Intel UHD Graphics, 16GB RAM SSD 512GB, Free Dos, ლეპტოპი";
