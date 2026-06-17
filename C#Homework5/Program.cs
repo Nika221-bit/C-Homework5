@@ -1,5 +1,23 @@
 ﻿//ყველა მეთოდი გაშვებულია და დაკომენტარებულია რათა სათითაოდ უფრო მარტივად შემოწმდეს
 
+int ReturMethod(int age)
+{
+    if (age >= 50)
+    {
+        Console.WriteLine("shemowmeba");
+        return 10;
+    }
+    else if (age < 0)
+    {
+        Console.WriteLine("Sheiyvane naturaluri ricxvi!");
+        return -10;
+    }
+
+    return 0;
+}
+
+//ReturMethod(50);
+
 void StringLength()
 {
     string shortText = "G@M RJob@";
